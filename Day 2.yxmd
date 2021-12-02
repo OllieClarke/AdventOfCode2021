@@ -1,0 +1,3401 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.3">
+  <Nodes>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="282" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>Input</UpdateField_Name>
+          <CreateField_Name>X</CreateField_Name>
+          <CreateField_Type>Int64</CreateField_Type>
+          <CreateField_Size>8</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>IF contains([input],'down') OR contains([input],'up') THEN [row-1:x]
+ELSE [row-1:x]+tonumber(replace([input],'forward ',''))
+ENDIF</Expression>
+          <GroupByFields />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Create X</AnnotationText>
+          <DefaultAnnotationText>IF contains([input],'down') OR contains([input],'up') THEN [r...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="678" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\ollie\AppData\Local\Temp\Engine_13060_d837fc21ec8646169959d2e700d64143_\Engine_12244_e1b21f05825c4943935945b7d93d145a_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="390" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>Input</UpdateField_Name>
+          <CreateField_Name>Y</CreateField_Name>
+          <CreateField_Type>Int64</CreateField_Type>
+          <CreateField_Size>8</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>IF contains([input],'forward')THEN [row-1:Y]
+ELSEIF contains([input],'up') THEN [row-1:Y]-tonumber(replace([input],'up ',''))
+ELSE [row-1:Y]+tonumber(replace([input],'down ',''))
+ENDIF</Expression>
+          <GroupByFields />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Create Y</AnnotationText>
+          <DefaultAnnotationText>IF contains([input],'forward')THEN [row-1:Y]
+ELSEIF contains(...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+        <Position x="486" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Last</Mode>
+          <N>1</N>
+          <GroupFields orderChanged="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Last 1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="582" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[X]*[Y]" field="Answer" size="8" type="Int64" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Answer = [X]*[Y]
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="138" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="1000" />
+          <Fields>
+            <Field name="Input" />
+          </Fields>
+          <Data>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>down 9</c>
+            </r>
+            <r>
+              <c>down 6</c>
+            </r>
+            <r>
+              <c>up 2</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>forward 3</c>
+            </r>
+            <r>
+              <c>forward 6</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>down 8</c>
+            </r>
+            <r>
+              <c>up 4</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>down 4</c>
+            </r>
+            <r>
+              <c>up 6</c>
+            </r>
+            <r>
+              <c>down 7</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>down 9</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>up 4</c>
+            </r>
+            <r>
+              <c>forward 1</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>down 8</c>
+            </r>
+            <r>
+              <c>up 2</c>
+            </r>
+            <r>
+              <c>down 1</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>up 7</c>
+            </r>
+            <r>
+              <c>up 5</c>
+            </r>
+            <r>
+              <c>down 8</c>
+            </r>
+            <r>
+              <c>down 6</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>up 8</c>
+            </r>
+            <r>
+              <c>down 4</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>forward 1</c>
+            </r>
+            <r>
+              <c>up 9</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>forward 1</c>
+            </r>
+            <r>
+              <c>down 2</c>
+            </r>
+            <r>
+              <c>down 7</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>up 8</c>
+            </r>
+            <r>
+              <c>forward 1</c>
+            </r>
+            <r>
+              <c>down 9</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>forward 6</c>
+            </r>
+            <r>
+              <c>up 6</c>
+            </r>
+            <r>
+              <c>down 4</c>
+            </r>
+            <r>
+              <c>forward 6</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>forward 1</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>forward 3</c>
+            </r>
+            <r>
+              <c>down 8</c>
+            </r>
+            <r>
+              <c>down 2</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>forward 1</c>
+            </r>
+            <r>
+              <c>up 4</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>down 1</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>forward 2</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>down 2</c>
+            </r>
+            <r>
+              <c>up 9</c>
+            </r>
+            <r>
+              <c>forward 2</c>
+            </r>
+            <r>
+              <c>down 2</c>
+            </r>
+            <r>
+              <c>down 2</c>
+            </r>
+            <r>
+              <c>down 9</c>
+            </r>
+            <r>
+              <c>up 8</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>down 4</c>
+            </r>
+            <r>
+              <c>up 3</c>
+            </r>
+            <r>
+              <c>down 1</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>down 7</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>down 2</c>
+            </r>
+            <r>
+              <c>up 9</c>
+            </r>
+            <r>
+              <c>up 3</c>
+            </r>
+            <r>
+              <c>down 2</c>
+            </r>
+            <r>
+              <c>up 2</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>forward 2</c>
+            </r>
+            <r>
+              <c>forward 6</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>up 9</c>
+            </r>
+            <r>
+              <c>forward 6</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>forward 1</c>
+            </r>
+            <r>
+              <c>down 2</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>up 5</c>
+            </r>
+            <r>
+              <c>down 6</c>
+            </r>
+            <r>
+              <c>forward 1</c>
+            </r>
+            <r>
+              <c>down 8</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>forward 3</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>up 3</c>
+            </r>
+            <r>
+              <c>down 4</c>
+            </r>
+            <r>
+              <c>down 8</c>
+            </r>
+            <r>
+              <c>up 7</c>
+            </r>
+            <r>
+              <c>down 7</c>
+            </r>
+            <r>
+              <c>forward 3</c>
+            </r>
+            <r>
+              <c>down 2</c>
+            </r>
+            <r>
+              <c>forward 3</c>
+            </r>
+            <r>
+              <c>up 2</c>
+            </r>
+            <r>
+              <c>down 1</c>
+            </r>
+            <r>
+              <c>up 2</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>forward 2</c>
+            </r>
+            <r>
+              <c>down 1</c>
+            </r>
+            <r>
+              <c>up 9</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>down 6</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>down 4</c>
+            </r>
+            <r>
+              <c>up 4</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>down 6</c>
+            </r>
+            <r>
+              <c>forward 1</c>
+            </r>
+            <r>
+              <c>forward 6</c>
+            </r>
+            <r>
+              <c>down 8</c>
+            </r>
+            <r>
+              <c>down 2</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>up 8</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>down 6</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>down 2</c>
+            </r>
+            <r>
+              <c>forward 6</c>
+            </r>
+            <r>
+              <c>up 3</c>
+            </r>
+            <r>
+              <c>up 6</c>
+            </r>
+            <r>
+              <c>forward 2</c>
+            </r>
+            <r>
+              <c>up 8</c>
+            </r>
+            <r>
+              <c>up 2</c>
+            </r>
+            <r>
+              <c>up 4</c>
+            </r>
+            <r>
+              <c>forward 3</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>down 7</c>
+            </r>
+            <r>
+              <c>up 1</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>forward 1</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>up 6</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>forward 2</c>
+            </r>
+            <r>
+              <c>up 9</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>down 2</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>forward 6</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>forward 6</c>
+            </r>
+            <r>
+              <c>forward 3</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>forward 3</c>
+            </r>
+            <r>
+              <c>forward 1</c>
+            </r>
+            <r>
+              <c>forward 1</c>
+            </r>
+            <r>
+              <c>up 1</c>
+            </r>
+            <r>
+              <c>down 4</c>
+            </r>
+            <r>
+              <c>up 5</c>
+            </r>
+            <r>
+              <c>up 4</c>
+            </r>
+            <r>
+              <c>up 8</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>forward 3</c>
+            </r>
+            <r>
+              <c>up 6</c>
+            </r>
+            <r>
+              <c>up 4</c>
+            </r>
+            <r>
+              <c>down 4</c>
+            </r>
+            <r>
+              <c>up 4</c>
+            </r>
+            <r>
+              <c>down 6</c>
+            </r>
+            <r>
+              <c>forward 1</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>up 3</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>up 9</c>
+            </r>
+            <r>
+              <c>down 9</c>
+            </r>
+            <r>
+              <c>forward 1</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>up 2</c>
+            </r>
+            <r>
+              <c>up 1</c>
+            </r>
+            <r>
+              <c>down 8</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>forward 3</c>
+            </r>
+            <r>
+              <c>forward 2</c>
+            </r>
+            <r>
+              <c>forward 6</c>
+            </r>
+            <r>
+              <c>down 2</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>up 9</c>
+            </r>
+            <r>
+              <c>forward 6</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>down 6</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>forward 6</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>up 3</c>
+            </r>
+            <r>
+              <c>forward 2</c>
+            </r>
+            <r>
+              <c>forward 2</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>up 2</c>
+            </r>
+            <r>
+              <c>up 7</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>down 9</c>
+            </r>
+            <r>
+              <c>up 5</c>
+            </r>
+            <r>
+              <c>up 5</c>
+            </r>
+            <r>
+              <c>up 1</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>forward 3</c>
+            </r>
+            <r>
+              <c>forward 2</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>down 7</c>
+            </r>
+            <r>
+              <c>down 7</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>down 2</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>down 6</c>
+            </r>
+            <r>
+              <c>down 8</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>down 9</c>
+            </r>
+            <r>
+              <c>forward 1</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>forward 1</c>
+            </r>
+            <r>
+              <c>forward 1</c>
+            </r>
+            <r>
+              <c>up 5</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>up 7</c>
+            </r>
+            <r>
+              <c>up 7</c>
+            </r>
+            <r>
+              <c>down 6</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>up 7</c>
+            </r>
+            <r>
+              <c>down 2</c>
+            </r>
+            <r>
+              <c>down 9</c>
+            </r>
+            <r>
+              <c>down 9</c>
+            </r>
+            <r>
+              <c>forward 3</c>
+            </r>
+            <r>
+              <c>up 9</c>
+            </r>
+            <r>
+              <c>down 7</c>
+            </r>
+            <r>
+              <c>down 2</c>
+            </r>
+            <r>
+              <c>up 6</c>
+            </r>
+            <r>
+              <c>down 9</c>
+            </r>
+            <r>
+              <c>down 6</c>
+            </r>
+            <r>
+              <c>up 3</c>
+            </r>
+            <r>
+              <c>up 6</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>forward 6</c>
+            </r>
+            <r>
+              <c>down 2</c>
+            </r>
+            <r>
+              <c>up 3</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>up 1</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>up 1</c>
+            </r>
+            <r>
+              <c>forward 2</c>
+            </r>
+            <r>
+              <c>down 8</c>
+            </r>
+            <r>
+              <c>up 9</c>
+            </r>
+            <r>
+              <c>forward 3</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>down 8</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>up 5</c>
+            </r>
+            <r>
+              <c>up 3</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>down 4</c>
+            </r>
+            <r>
+              <c>down 2</c>
+            </r>
+            <r>
+              <c>forward 1</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>down 1</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>down 1</c>
+            </r>
+            <r>
+              <c>up 1</c>
+            </r>
+            <r>
+              <c>down 4</c>
+            </r>
+            <r>
+              <c>forward 6</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>down 7</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>down 2</c>
+            </r>
+            <r>
+              <c>down 2</c>
+            </r>
+            <r>
+              <c>up 1</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>down 2</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>up 4</c>
+            </r>
+            <r>
+              <c>down 8</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>up 2</c>
+            </r>
+            <r>
+              <c>down 7</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>up 4</c>
+            </r>
+            <r>
+              <c>down 8</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>up 3</c>
+            </r>
+            <r>
+              <c>down 9</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>up 6</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>down 6</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>down 1</c>
+            </r>
+            <r>
+              <c>down 6</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>forward 3</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>up 8</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>up 2</c>
+            </r>
+            <r>
+              <c>up 3</c>
+            </r>
+            <r>
+              <c>up 5</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>forward 1</c>
+            </r>
+            <r>
+              <c>down 2</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>forward 1</c>
+            </r>
+            <r>
+              <c>forward 6</c>
+            </r>
+            <r>
+              <c>down 6</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>down 2</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>forward 6</c>
+            </r>
+            <r>
+              <c>down 4</c>
+            </r>
+            <r>
+              <c>down 8</c>
+            </r>
+            <r>
+              <c>down 6</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>forward 2</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>down 1</c>
+            </r>
+            <r>
+              <c>down 9</c>
+            </r>
+            <r>
+              <c>forward 2</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>forward 2</c>
+            </r>
+            <r>
+              <c>down 4</c>
+            </r>
+            <r>
+              <c>down 6</c>
+            </r>
+            <r>
+              <c>up 5</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>forward 1</c>
+            </r>
+            <r>
+              <c>down 1</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>forward 2</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>forward 3</c>
+            </r>
+            <r>
+              <c>up 8</c>
+            </r>
+            <r>
+              <c>down 4</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>up 5</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>up 5</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>up 7</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>up 9</c>
+            </r>
+            <r>
+              <c>up 2</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>down 8</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>down 2</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>down 7</c>
+            </r>
+            <r>
+              <c>up 4</c>
+            </r>
+            <r>
+              <c>forward 2</c>
+            </r>
+            <r>
+              <c>forward 1</c>
+            </r>
+            <r>
+              <c>up 5</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>down 1</c>
+            </r>
+            <r>
+              <c>down 7</c>
+            </r>
+            <r>
+              <c>up 6</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>down 6</c>
+            </r>
+            <r>
+              <c>forward 2</c>
+            </r>
+            <r>
+              <c>forward 2</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>down 9</c>
+            </r>
+            <r>
+              <c>down 4</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>forward 6</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>up 9</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>down 9</c>
+            </r>
+            <r>
+              <c>down 6</c>
+            </r>
+            <r>
+              <c>down 2</c>
+            </r>
+            <r>
+              <c>down 7</c>
+            </r>
+            <r>
+              <c>up 3</c>
+            </r>
+            <r>
+              <c>forward 3</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>up 6</c>
+            </r>
+            <r>
+              <c>down 7</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>forward 3</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>down 2</c>
+            </r>
+            <r>
+              <c>down 4</c>
+            </r>
+            <r>
+              <c>up 4</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>forward 3</c>
+            </r>
+            <r>
+              <c>forward 1</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>down 7</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>up 7</c>
+            </r>
+            <r>
+              <c>forward 3</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>down 9</c>
+            </r>
+            <r>
+              <c>down 1</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>forward 6</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>down 6</c>
+            </r>
+            <r>
+              <c>forward 6</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>down 7</c>
+            </r>
+            <r>
+              <c>forward 2</c>
+            </r>
+            <r>
+              <c>down 1</c>
+            </r>
+            <r>
+              <c>down 8</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>down 4</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>down 4</c>
+            </r>
+            <r>
+              <c>up 4</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>down 4</c>
+            </r>
+            <r>
+              <c>forward 3</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>up 7</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>down 1</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>down 2</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>forward 6</c>
+            </r>
+            <r>
+              <c>forward 3</c>
+            </r>
+            <r>
+              <c>down 7</c>
+            </r>
+            <r>
+              <c>forward 2</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>down 6</c>
+            </r>
+            <r>
+              <c>forward 1</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>up 1</c>
+            </r>
+            <r>
+              <c>forward 3</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>forward 3</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>forward 6</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>up 4</c>
+            </r>
+            <r>
+              <c>forward 6</c>
+            </r>
+            <r>
+              <c>forward 3</c>
+            </r>
+            <r>
+              <c>down 9</c>
+            </r>
+            <r>
+              <c>up 4</c>
+            </r>
+            <r>
+              <c>up 6</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>down 8</c>
+            </r>
+            <r>
+              <c>down 2</c>
+            </r>
+            <r>
+              <c>down 9</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>up 8</c>
+            </r>
+            <r>
+              <c>forward 3</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>up 8</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>down 9</c>
+            </r>
+            <r>
+              <c>down 1</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>forward 3</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>up 9</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>down 6</c>
+            </r>
+            <r>
+              <c>down 1</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>up 3</c>
+            </r>
+            <r>
+              <c>forward 3</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>down 7</c>
+            </r>
+            <r>
+              <c>down 4</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>up 5</c>
+            </r>
+            <r>
+              <c>forward 2</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>up 5</c>
+            </r>
+            <r>
+              <c>up 4</c>
+            </r>
+            <r>
+              <c>up 5</c>
+            </r>
+            <r>
+              <c>forward 1</c>
+            </r>
+            <r>
+              <c>down 2</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>down 9</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>forward 1</c>
+            </r>
+            <r>
+              <c>up 5</c>
+            </r>
+            <r>
+              <c>forward 3</c>
+            </r>
+            <r>
+              <c>forward 1</c>
+            </r>
+            <r>
+              <c>down 1</c>
+            </r>
+            <r>
+              <c>up 1</c>
+            </r>
+            <r>
+              <c>down 7</c>
+            </r>
+            <r>
+              <c>up 4</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>up 9</c>
+            </r>
+            <r>
+              <c>down 9</c>
+            </r>
+            <r>
+              <c>down 9</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>forward 3</c>
+            </r>
+            <r>
+              <c>forward 3</c>
+            </r>
+            <r>
+              <c>up 4</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>forward 6</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>down 2</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>down 9</c>
+            </r>
+            <r>
+              <c>down 4</c>
+            </r>
+            <r>
+              <c>down 4</c>
+            </r>
+            <r>
+              <c>forward 3</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>down 6</c>
+            </r>
+            <r>
+              <c>up 5</c>
+            </r>
+            <r>
+              <c>up 4</c>
+            </r>
+            <r>
+              <c>down 6</c>
+            </r>
+            <r>
+              <c>up 9</c>
+            </r>
+            <r>
+              <c>down 9</c>
+            </r>
+            <r>
+              <c>up 2</c>
+            </r>
+            <r>
+              <c>up 1</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>forward 6</c>
+            </r>
+            <r>
+              <c>up 6</c>
+            </r>
+            <r>
+              <c>forward 1</c>
+            </r>
+            <r>
+              <c>down 9</c>
+            </r>
+            <r>
+              <c>down 6</c>
+            </r>
+            <r>
+              <c>down 8</c>
+            </r>
+            <r>
+              <c>down 9</c>
+            </r>
+            <r>
+              <c>down 6</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>up 6</c>
+            </r>
+            <r>
+              <c>down 2</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>forward 2</c>
+            </r>
+            <r>
+              <c>down 4</c>
+            </r>
+            <r>
+              <c>up 3</c>
+            </r>
+            <r>
+              <c>forward 6</c>
+            </r>
+            <r>
+              <c>down 2</c>
+            </r>
+            <r>
+              <c>down 7</c>
+            </r>
+            <r>
+              <c>down 1</c>
+            </r>
+            <r>
+              <c>up 6</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>forward 1</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>up 9</c>
+            </r>
+            <r>
+              <c>forward 2</c>
+            </r>
+            <r>
+              <c>up 8</c>
+            </r>
+            <r>
+              <c>down 4</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>up 2</c>
+            </r>
+            <r>
+              <c>up 2</c>
+            </r>
+            <r>
+              <c>down 1</c>
+            </r>
+            <r>
+              <c>forward 6</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>forward 2</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>down 6</c>
+            </r>
+            <r>
+              <c>up 8</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>up 2</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>forward 2</c>
+            </r>
+            <r>
+              <c>down 1</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>down 1</c>
+            </r>
+            <r>
+              <c>up 1</c>
+            </r>
+            <r>
+              <c>down 9</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>forward 3</c>
+            </r>
+            <r>
+              <c>down 6</c>
+            </r>
+            <r>
+              <c>up 5</c>
+            </r>
+            <r>
+              <c>up 9</c>
+            </r>
+            <r>
+              <c>down 1</c>
+            </r>
+            <r>
+              <c>forward 2</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>down 4</c>
+            </r>
+            <r>
+              <c>forward 6</c>
+            </r>
+            <r>
+              <c>forward 1</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>forward 2</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>up 7</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>forward 2</c>
+            </r>
+            <r>
+              <c>down 2</c>
+            </r>
+            <r>
+              <c>forward 1</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>down 4</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>down 6</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>forward 3</c>
+            </r>
+            <r>
+              <c>up 5</c>
+            </r>
+            <r>
+              <c>up 5</c>
+            </r>
+            <r>
+              <c>down 6</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>forward 6</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>forward 1</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>forward 6</c>
+            </r>
+            <r>
+              <c>up 2</c>
+            </r>
+            <r>
+              <c>up 4</c>
+            </r>
+            <r>
+              <c>forward 6</c>
+            </r>
+            <r>
+              <c>down 4</c>
+            </r>
+            <r>
+              <c>down 9</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>down 4</c>
+            </r>
+            <r>
+              <c>up 2</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>down 7</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>up 9</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>up 7</c>
+            </r>
+            <r>
+              <c>up 2</c>
+            </r>
+            <r>
+              <c>up 6</c>
+            </r>
+            <r>
+              <c>forward 1</c>
+            </r>
+            <r>
+              <c>up 9</c>
+            </r>
+            <r>
+              <c>down 4</c>
+            </r>
+            <r>
+              <c>down 8</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>up 5</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>up 9</c>
+            </r>
+            <r>
+              <c>up 5</c>
+            </r>
+            <r>
+              <c>forward 1</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>down 9</c>
+            </r>
+            <r>
+              <c>up 2</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>down 8</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>up 8</c>
+            </r>
+            <r>
+              <c>forward 1</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>forward 6</c>
+            </r>
+            <r>
+              <c>down 2</c>
+            </r>
+            <r>
+              <c>down 8</c>
+            </r>
+            <r>
+              <c>down 8</c>
+            </r>
+            <r>
+              <c>down 8</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>up 2</c>
+            </r>
+            <r>
+              <c>up 9</c>
+            </r>
+            <r>
+              <c>up 8</c>
+            </r>
+            <r>
+              <c>forward 2</c>
+            </r>
+            <r>
+              <c>down 4</c>
+            </r>
+            <r>
+              <c>up 7</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>forward 1</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>down 8</c>
+            </r>
+            <r>
+              <c>down 2</c>
+            </r>
+            <r>
+              <c>forward 6</c>
+            </r>
+            <r>
+              <c>forward 2</c>
+            </r>
+            <r>
+              <c>down 6</c>
+            </r>
+            <r>
+              <c>down 6</c>
+            </r>
+            <r>
+              <c>up 9</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>down 7</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>down 4</c>
+            </r>
+            <r>
+              <c>up 2</c>
+            </r>
+            <r>
+              <c>up 7</c>
+            </r>
+            <r>
+              <c>down 8</c>
+            </r>
+            <r>
+              <c>forward 6</c>
+            </r>
+            <r>
+              <c>up 2</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>down 7</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>up 4</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>down 4</c>
+            </r>
+            <r>
+              <c>forward 6</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>down 2</c>
+            </r>
+            <r>
+              <c>down 6</c>
+            </r>
+            <r>
+              <c>up 4</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>forward 1</c>
+            </r>
+            <r>
+              <c>down 2</c>
+            </r>
+            <r>
+              <c>up 6</c>
+            </r>
+            <r>
+              <c>down 6</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>up 2</c>
+            </r>
+            <r>
+              <c>up 4</c>
+            </r>
+            <r>
+              <c>forward 1</c>
+            </r>
+            <r>
+              <c>up 3</c>
+            </r>
+            <r>
+              <c>up 5</c>
+            </r>
+            <r>
+              <c>down 4</c>
+            </r>
+            <r>
+              <c>down 1</c>
+            </r>
+            <r>
+              <c>down 7</c>
+            </r>
+            <r>
+              <c>down 7</c>
+            </r>
+            <r>
+              <c>down 4</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>down 9</c>
+            </r>
+            <r>
+              <c>down 4</c>
+            </r>
+            <r>
+              <c>down 2</c>
+            </r>
+            <r>
+              <c>down 7</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>forward 1</c>
+            </r>
+            <r>
+              <c>down 8</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>down 8</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>forward 3</c>
+            </r>
+            <r>
+              <c>up 8</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>up 5</c>
+            </r>
+            <r>
+              <c>up 2</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>forward 6</c>
+            </r>
+            <r>
+              <c>down 8</c>
+            </r>
+            <r>
+              <c>down 1</c>
+            </r>
+            <r>
+              <c>up 6</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>down 9</c>
+            </r>
+            <r>
+              <c>forward 3</c>
+            </r>
+            <r>
+              <c>up 1</c>
+            </r>
+            <r>
+              <c>down 1</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>up 5</c>
+            </r>
+            <r>
+              <c>down 4</c>
+            </r>
+            <r>
+              <c>up 6</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>forward 6</c>
+            </r>
+            <r>
+              <c>up 5</c>
+            </r>
+            <r>
+              <c>forward 2</c>
+            </r>
+            <r>
+              <c>up 3</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>down 9</c>
+            </r>
+            <r>
+              <c>forward 3</c>
+            </r>
+            <r>
+              <c>forward 1</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>up 5</c>
+            </r>
+            <r>
+              <c>forward 3</c>
+            </r>
+            <r>
+              <c>forward 3</c>
+            </r>
+            <r>
+              <c>up 9</c>
+            </r>
+            <r>
+              <c>down 2</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>down 1</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>down 4</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>down 8</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>down 6</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>down 6</c>
+            </r>
+            <r>
+              <c>up 8</c>
+            </r>
+            <r>
+              <c>forward 6</c>
+            </r>
+            <r>
+              <c>down 8</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>down 6</c>
+            </r>
+            <r>
+              <c>up 2</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>forward 1</c>
+            </r>
+            <r>
+              <c>up 2</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>up 8</c>
+            </r>
+            <r>
+              <c>up 3</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>up 5</c>
+            </r>
+            <r>
+              <c>forward 2</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>down 2</c>
+            </r>
+            <r>
+              <c>down 7</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>forward 2</c>
+            </r>
+            <r>
+              <c>up 1</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>down 9</c>
+            </r>
+            <r>
+              <c>up 4</c>
+            </r>
+            <r>
+              <c>up 3</c>
+            </r>
+            <r>
+              <c>down 8</c>
+            </r>
+            <r>
+              <c>up 1</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>up 2</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>up 3</c>
+            </r>
+            <r>
+              <c>forward 1</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>forward 3</c>
+            </r>
+            <r>
+              <c>up 5</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>up 3</c>
+            </r>
+            <r>
+              <c>down 2</c>
+            </r>
+            <r>
+              <c>forward 6</c>
+            </r>
+            <r>
+              <c>down 6</c>
+            </r>
+            <r>
+              <c>up 3</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>down 9</c>
+            </r>
+            <r>
+              <c>up 4</c>
+            </r>
+            <r>
+              <c>down 4</c>
+            </r>
+            <r>
+              <c>down 6</c>
+            </r>
+            <r>
+              <c>up 9</c>
+            </r>
+            <r>
+              <c>forward 3</c>
+            </r>
+            <r>
+              <c>forward 2</c>
+            </r>
+            <r>
+              <c>up 2</c>
+            </r>
+            <r>
+              <c>up 5</c>
+            </r>
+            <r>
+              <c>forward 2</c>
+            </r>
+            <r>
+              <c>up 5</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>down 8</c>
+            </r>
+            <r>
+              <c>down 7</c>
+            </r>
+            <r>
+              <c>up 8</c>
+            </r>
+            <r>
+              <c>down 1</c>
+            </r>
+            <r>
+              <c>up 1</c>
+            </r>
+            <r>
+              <c>up 9</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>down 9</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>down 8</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>forward 1</c>
+            </r>
+            <r>
+              <c>forward 2</c>
+            </r>
+            <r>
+              <c>down 8</c>
+            </r>
+            <r>
+              <c>forward 3</c>
+            </r>
+            <r>
+              <c>forward 6</c>
+            </r>
+            <r>
+              <c>down 9</c>
+            </r>
+            <r>
+              <c>forward 2</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>down 4</c>
+            </r>
+            <r>
+              <c>down 1</c>
+            </r>
+            <r>
+              <c>down 1</c>
+            </r>
+            <r>
+              <c>down 8</c>
+            </r>
+            <r>
+              <c>down 1</c>
+            </r>
+            <r>
+              <c>down 4</c>
+            </r>
+            <r>
+              <c>up 3</c>
+            </r>
+            <r>
+              <c>down 7</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>forward 1</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>down 7</c>
+            </r>
+            <r>
+              <c>down 6</c>
+            </r>
+            <r>
+              <c>forward 2</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>down 4</c>
+            </r>
+            <r>
+              <c>forward 6</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>down 1</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>up 4</c>
+            </r>
+            <r>
+              <c>up 5</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>down 1</c>
+            </r>
+            <r>
+              <c>up 5</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>down 9</c>
+            </r>
+            <r>
+              <c>down 7</c>
+            </r>
+            <r>
+              <c>up 1</c>
+            </r>
+            <r>
+              <c>up 9</c>
+            </r>
+            <r>
+              <c>up 4</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>down 8</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>down 2</c>
+            </r>
+            <r>
+              <c>down 7</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>down 6</c>
+            </r>
+            <r>
+              <c>down 8</c>
+            </r>
+            <r>
+              <c>forward 3</c>
+            </r>
+            <r>
+              <c>forward 6</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>up 7</c>
+            </r>
+            <r>
+              <c>down 8</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>up 3</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>up 4</c>
+            </r>
+            <r>
+              <c>forward 3</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>down 3</c>
+            </r>
+            <r>
+              <c>down 6</c>
+            </r>
+            <r>
+              <c>forward 9</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>forward 1</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>forward 8</c>
+            </r>
+            <r>
+              <c>forward 2</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>up 9</c>
+            </r>
+            <r>
+              <c>down 8</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>forward 2</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+            <r>
+              <c>down 6</c>
+            </r>
+            <r>
+              <c>forward 4</c>
+            </r>
+            <r>
+              <c>forward 2</c>
+            </r>
+            <r>
+              <c>forward 7</c>
+            </r>
+            <r>
+              <c>down 6</c>
+            </r>
+            <r>
+              <c>down 2</c>
+            </r>
+            <r>
+              <c>down 5</c>
+            </r>
+            <r>
+              <c>down 1</c>
+            </r>
+            <r>
+              <c>forward 5</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="282" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>Input</UpdateField_Name>
+          <CreateField_Name>X</CreateField_Name>
+          <CreateField_Type>Int64</CreateField_Type>
+          <CreateField_Size>8</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>IF contains([input],'down') OR contains([input],'up') THEN [row-1:x]
+ELSE [row-1:x]+tonumber(replace([input],'forward ',''))
+ENDIF</Expression>
+          <GroupByFields />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Create X</AnnotationText>
+          <DefaultAnnotationText>IF contains([input],'down') OR contains([input],'up') THEN [r...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="486" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="IF contains([Input],'forward') AND tonumber(replace([Input],'forward ',''))!=0&#xA;THEN [Y]*tonumber(replace([Input],'forward ',''))&#xA;ELSE 0&#xA;ENDIF" field="Out" size="8" type="Int64" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Create Y changes</AnnotationText>
+          <DefaultAnnotationText>Out = IF contains([Input],'forward') AND tonumber(replace([Input],'forward ','')...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RunningTotal.RunningTotal">
+        <Position x="594" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <GroupByFields />
+          <RunningTotalFields>
+            <Field field="Out" />
+          </RunningTotalFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Run tot of Y</AnnotationText>
+          <DefaultAnnotationText>Run tot of out</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRunningTotal" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="882" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\ollie\AppData\Local\Temp\Engine_13060_d837fc21ec8646169959d2e700d64143_\Engine_12244_2b2ac56669b24d8c943517537f53cf08_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+        <Position x="690" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Last</Mode>
+          <N>1</N>
+          <GroupFields orderChanged="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Last 1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="786" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[X]*[RunTot_Out]" field="Answer" size="8" type="Int64" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Answer = [X]*[RunTot_Out]
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="390" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>Input</UpdateField_Name>
+          <CreateField_Name>Y</CreateField_Name>
+          <CreateField_Type>Int64</CreateField_Type>
+          <CreateField_Size>8</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>IF contains([input],'forward')THEN [row-1:Y]
+ELSEIF contains([input],'up') THEN [row-1:Y]-tonumber(replace([input],'up ',''))
+ELSE [row-1:Y]+tonumber(replace([input],'down ',''))
+ENDIF</Expression>
+          <GroupByFields />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Create Aim</AnnotationText>
+          <DefaultAnnotationText>IF contains([input],'forward')THEN [row-1:Y]
+ELSEIF contains(...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="False" />
+    <ShowConnectionStatusOnlyWhenRunning value="False" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Day 2</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="d543a19f-a1a9-4caf-9f0e-9bd062c548f5" />
+      <Telemetry>
+        <PreviousWorkflowId value="6ac349ac-1425-47d9-86e1-0d9ba2e45b7a" />
+        <OriginWorkflowId value="6ac349ac-1425-47d9-86e1-0d9ba2e45b7a" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
